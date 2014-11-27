@@ -1,20 +1,28 @@
-<p>
-  Base64 operations
-</p>
+<div class='row'>
+  <div class='col-md-4 col-sm-6'>
+    <p>
+      Input
+    </p>
+    {{textarea rows=10 cols=50 value=inputstring}}
+  </div>
 
-{{textarea value=inputstring}}
+  <div class='col-md-4 col-sm-6'>
+    <p>
+      Decoded
+    </p>
+    <p>
+      {{textarea rows=10 cols=50 value=decoded}}
+    </p>
 
-<p>
-  Decoded
-</p>
-<p>
-  {{decoded}}
-</p>
+  </div>
 
+  <div class='col-md-4 col-sm-6'>
+    <p>
+      Encoded
+    </p>
+    <p>
+      {{textarea rows=10 cols=50 value=encoded}}
+    </p>
+  </div>
 
-<p>
-  Encoded
-</p>
-<p>
-  {{encoded}}
-</p>
+</div>

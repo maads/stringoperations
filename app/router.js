@@ -7,6 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('base64');
+  this.route('md5');
 });
 
 export default Router;

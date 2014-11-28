@@ -15,7 +15,6 @@ export default Ember.ObjectController.extend({
     return 0;
   }.property('inputstring', 'whitespace'),
   mostUsed: function(){
-    var wordCounts = { };
     if(!Ember.isEmpty(this.get('inputstring'))){
       var inputstring = this.get('inputstring') ;
       var characters = {};
@@ -27,13 +26,14 @@ export default Ember.ObjectController.extend({
             characters[key] = 0;
           }
           characters[key]++;
-          if(mostUsedCharacter == '' || characters[key] > characters[mostUsedCharacter]){
+          if(mostUsedCharacter === '' || characters[key] > characters[mostUsedCharacter]){
             mostUsedCharacter = key;
           }
         }
         var frequency = characters[mostUsedCharacter];
-        if(mostUsedCharacter === " ")
+        if(mostUsedCharacter === " "){
           mostUsedCharacter = "whitespace";
+        }
         return mostUsedCharacter + " (" + frequency  + ")";
     }
     return "";
